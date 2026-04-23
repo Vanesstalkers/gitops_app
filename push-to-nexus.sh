@@ -7,10 +7,10 @@ set -eu
 #   ./push-to-nexus.sh nexus-v3
 
 TAG="${1:-nexus-v3}"
-REGISTRY="${REGISTRY:-172.17.0.1:18082}"
+REGISTRY="${REGISTRY:-localhost:18082}"
 IMAGE_NAME="${IMAGE_NAME:-php-hello}"
-USERNAME="${USERNAME:-admin}"
-NEXUS_PASSWORD="${NEXUS_PASSWORD:-}"
+USERNAME="admin"
+NEXUS_PASSWORD="${NEXUS_PASSWORD:-f7346f95-2b96-4466-bba1-dace504331a2}"
 
 if [ -z "$NEXUS_PASSWORD" ]; then
   echo "ERROR: set NEXUS_PASSWORD env variable before running."
